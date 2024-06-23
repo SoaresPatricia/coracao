@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 200px; 
+    height: 200px; 
+}
+
+.coracao {
+    background-color: red;
+    height: 200px;
+    width: 200px;   
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.coracao:before,
+.coracao:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+    
+}
+
+.coracao:before {
+    top: -100px;
+}
+
+.coracao:after {
+    left: 100px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.coracao{
+  animation: pulse 0.5s infinite ease-in-out;
+}
